@@ -8,14 +8,6 @@
 	animation-iteration-count: infinite;
 }
 
-body {
-  background: url("./assets/background.webp") no-repeat center center fixed; 
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
-}
-
 #profilepic{
   position: relative;
   display: block;
@@ -29,6 +21,11 @@ body {
 }
 #profilepic:hover {
   box-shadow: 0 0 2px 5px rgba(173, 234, 255, 0.5);
+}
+
+#home{
+  display: inline-block;
+  padding: 10px;
 }
 
 .fa {
