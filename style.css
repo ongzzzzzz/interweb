@@ -3,6 +3,11 @@
   font-family: 'Inconsolata';
 }
 
+*:hover{
+  animation: rainbow 2.5s linear;
+	animation-iteration-count: infinite;
+}
+
 body {
   background: url("./assets/background.webp") no-repeat center center fixed; 
   -webkit-background-size: cover;
@@ -20,6 +25,7 @@ body {
   height: auto;
   border-radius: 20%;
   border: 5px solid #ddd;
+  animation: fadeIn 2s;
 }
 #profilepic:hover {
   box-shadow: 0 0 2px 5px rgba(173, 234, 255, 0.5);
@@ -49,4 +55,48 @@ footer {
   opacity: 50%;
   color: white;
   font-size: 25px;
+}
+
+@keyframes rainbow{
+	100%,0%{
+		color: rgb(255,0,0);
+	}
+	8%{
+		color: rgb(255,127,0);
+	}
+	16%{
+		color: rgb(255,255,0);
+	}
+	25%{
+		color: rgb(127,255,0);
+	}
+	33%{
+		color: rgb(0,255,0);
+	}
+	41%{
+		color: rgb(0,255,127);
+	}
+	50%{
+		color: rgb(0,255,255);
+	}
+	58%{
+		color: rgb(0,127,255);
+	}
+	66%{
+		color: rgb(0,0,255);
+	}
+	75%{
+		color: rgb(127,0,255);
+	}
+	83%{
+		color: rgb(255,0,255);
+	}
+	91%{
+		color: rgb(255,0,127);
+	}
+}
+
+@keyframes fadeIn {
+  0% {opacity:0;}
+  100% {opacity:1;}
 }
