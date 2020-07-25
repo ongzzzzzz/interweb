@@ -1,6 +1,7 @@
 *{
   color: azure;
   font-family: 'Inconsolata';
+  overflow: hidden;
 }
 
 *:hover{
@@ -17,10 +18,27 @@
   height: auto;
   border-radius: 20%;
   border: 5px solid #ddd;
-  animation: fadeIn 2s;
+  transition: box-shadow 500ms;
 }
 #profilepic:hover {
-  box-shadow: 0 0 2px 5px rgba(173, 234, 255, 0.5);
+  box-shadow: 0 0 2px 5px rgba(255, 255, 255, 0.5);
+}
+
+.maindiv{
+  display: inline-block;
+  overflow: hidden;
+}
+
+.maindiv a{
+  text-decoration: none;
+}
+
+.maindiv .fa{
+  animation: none;
+}
+
+.fade-in{
+  animation: fadeIn 2s;
 }
 
 #home{
