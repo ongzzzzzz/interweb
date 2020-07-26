@@ -49,10 +49,12 @@
 .fa {
   text-align: center;
   text-decoration: none;
+  padding: 5px;
+  background-color: rgba(0, 0, 0, 0.5);
   border-radius: 50%;
 }
 
-.fa:hover {
+.footer .fa:hover {
   opacity: 0.7;
 }
 
