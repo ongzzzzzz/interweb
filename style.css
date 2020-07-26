@@ -2,7 +2,7 @@
   color: azure;
   font-family: 'Inconsolata';
   overflow-x: hidden;
-  overflow-y: visible;
+  overflow-y: auto;
 }
 
 *:hover{
@@ -10,13 +10,46 @@
 	animation-iteration-count: infinite;
 }
 
+html, body {
+  height: 100%;
+}
+
+body{
+  display: flex;
+  flex-direction: column;
+}
+
+.maindiv{
+  display: block;
+  flex: 1 0 auto;
+}
+
+footer {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  flex-shrink: 0;
+  text-align: center;
+  padding: 3px;
+  background-color: grey;
+  opacity: 50%;
+  color: white;
+  font-size: 25px;
+}
+
+footer .fa:hover {
+  opacity: 0.7;
+}
+
+
 #profilepic{
   position: relative;
   display: block;
   margin-left: auto;
   margin-right: auto;
   width: 100px;
-  height: auto;
+  height: 100px;
   border-radius: 20%;
   border: 5px solid #ddd;
   transition: box-shadow 500ms;
@@ -25,32 +58,22 @@
   box-shadow: 0 0 2px 5px rgba(255, 255, 255, 0.5);
 }
 
-.maindiv{
-  display: block;
-
-}
-
 #home{
   display: inline-block;
 }
+#home a{
+  text-decoration: none; 
+}
+#home .fa{
+  animation: none; 
+}
 
 #muzzic{
+  color: black;
   padding: 10px;
-  margin-bottom: 10px;
   vertical-align: top;
   opacity: 0.9;
-}
-
-.maindiv a{
-  text-decoration: none;
-}
-
-.maindiv .fa{
-  animation: none;
-}
-
-.fade-in{
-  animation: fadeIn 2s;
+  overflow-y: hidden!important;
 }
 
 #home{
@@ -60,6 +83,9 @@
   align-content: center;
 }
 
+
+
+
 .fa {
   text-align: center;
   text-decoration: none;
@@ -68,25 +94,8 @@
   border-radius: 50%;
 }
 
-.footer .fa:hover {
-  opacity: 0.7;
-}
-
-footer {
-  position: absolute;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  vertical-align: bottom;
-  width: 100%;
-  height: auto;
-  margin-top: 10px;
-  text-align: center;
-  padding: 3px;
-  background-color: grey;
-  opacity: 50%;
-  color: white;
-  font-size: 25px;
+.fade-in{
+  animation: fadeIn 2s;
 }
 
 @keyframes rainbow{
