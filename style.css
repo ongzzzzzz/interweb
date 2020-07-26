@@ -42,14 +42,16 @@
 }
 
 #home{
-  display: inline-block;
+  display: block;
   padding: 10px;
+  font-size: 2em;
+  align-content: center;
 }
 
 .fa {
   text-align: center;
   text-decoration: none;
-  padding: 5px;
+  padding: 8px;
   background-color: rgba(0, 0, 0, 0.5);
   border-radius: 50%;
 }
