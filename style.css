@@ -1,8 +1,7 @@
 *{
   color: azure;
-  font-family: 'Inconsolata';
-  overflow-x: hidden;
-  overflow-y: auto;
+  /* font-family: 'Inconsolata'; */
+  font-family: 'Source Sans Pro', sans-serif;
 }
 
 *:hover{
@@ -11,21 +10,42 @@
 }
 
 html, body {
+  position: fixed;
   height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  bottom:0;
+  right:0;
+  overflow: auto;
 }
 
-body{
-  display: flex;
-  flex-direction: column;
+p{
+  font-size: 20px;
 }
 
 .maindiv{
   display: block;
-  flex: 1 0 auto;
+  width: 100%;
+  margin-block-start: 2px;
+  margin-block-end: 2px;
+  overflow: hidden;
+  align-content: center;
 }
 
+.fa {
+  text-align: center;
+  text-decoration: none;
+  padding: 8px;
+  background-color: rgba(0, 0, 0, 0.5);
+  border-radius: 50%;
+}
+
+/****** footer ******/
+
 footer {
-  position: absolute;
+  position: relative;
+  margin-top: 10px;
   left: 0;
   right: 0;
   bottom: 0;
@@ -43,9 +63,11 @@ footer .fa:hover {
 }
 
 
-#profilepic{
+/****** home ******/
+
+#profilepic, #cuckoo{
   position: relative;
-  display: block;
+  display: inline-block;
   margin-left: auto;
   margin-right: auto;
   width: 100px;
@@ -54,12 +76,19 @@ footer .fa:hover {
   border: 5px solid #ddd;
   transition: box-shadow 500ms;
 }
-#profilepic:hover {
+#profilepic:hover, #cuckoo:hover {
   box-shadow: 0 0 2px 5px rgba(255, 255, 255, 0.5);
 }
 
 #home{
   display: inline-block;
+  text-align: center;
+  padding: 10px;
+  font-size: 2em;
+}
+#home ul{
+  list-style-type: none;
+  text-align: left;
 }
 #home a{
   text-decoration: none; 
@@ -67,6 +96,38 @@ footer .fa:hover {
 #home .fa{
   animation: none; 
 }
+
+/****** about ******/
+
+#about h1{
+  text-shadow: 5px 5px gray;
+}
+
+#mapdiv{
+  position: relative;
+  overflow: hidden;
+  width: 60%;
+  float: left;
+}
+
+#map {
+  display: block;
+  width: 100%;
+  opacity: 0.8;
+  border-radius: 5%;
+}
+
+#mapdesc{
+  float: right;
+  margin-right: 5px;
+  background-color: rgba(0, 0, 0, 0.5);
+  border-radius: 10%;
+  width: 30%;
+}
+
+
+
+/****** muzzic ******/
 
 #muzzic{
   color: black;
@@ -76,23 +137,12 @@ footer .fa:hover {
   overflow-y: hidden!important;
 }
 
-#home{
-  display: block;
-  padding: 10px;
-  font-size: 2em;
-  align-content: center;
-}
 
 
 
 
-.fa {
-  text-align: center;
-  text-decoration: none;
-  padding: 8px;
-  background-color: rgba(0, 0, 0, 0.5);
-  border-radius: 50%;
-}
+
+/****** animation and keyframes ******/
 
 .fade-in{
   animation: fadeIn 2s;
