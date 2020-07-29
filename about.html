@@ -9,7 +9,7 @@
     <!-- font awesome logos -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <!-- google fonts -->
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inconsolata:b&effect=emboss">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:b&effect=emboss|3d-float">
     <!-- anaglyph, 3d float, 3d  -->
     <link rel="icon" href="./assets/cuckoo.jpg" type="image/x-icon"> 
 
@@ -22,16 +22,34 @@
   <body style= "background: url('./assets/pillars_of_creation/reddish(-+180).gif') no-repeat center center fixed; background-size: cover; ">
 
     <div id="about" class="maindiv">
-      <h1 class="font-effect-emboss">oh hey since you wanted to know about me, <br> here's a list so you can jot down easier 📃🧻</h1>
-      <ul>
+      <h1 class="font-effect-emboss">oh hey here's a list so you can jot down easier 📃🧻</h1>
+      <ul id="intro" class="font-effect-3d-float">
         <li>📛 Ong Zhi Zheng 王智政</li>
         <li>🎂 2 March 2005</li>
-        <li>🎌 Malaysian</li>
         <li>💬 Chinese, English, Malay, and Duolingo</li>
-        <li>💭</li>
+        <li>🎒 Chung Ling Private High School</li>
+        <li>💭 learning stuff so i can be milky as the milky way</li>
+        <li>
+           From <a href="https://clphscec.web.app" target="_blank">Creative Electronics Club</A>
+          <img id="cec" src="./assets/ceclogo.png"/>
+        </li>
+        
       </ul>
 
-      <h1 id="mapdesc">this a map yey</h1>
+      <div id="mapdesc">
+        <h2>
+        im here 24/7, and there are many other things to love other than me:
+        </h2>
+        <ul id="penang">
+          <li><a href="https://penangfoodie.com/"> 🍴 food</a></li>
+          <li><a href="https://en.wikipedia.org/wiki/Culture_of_Penang">💛 culture</a></li>
+          <li><a href="http://www.penang.ws/penang-attractions/placevisit.htm">🚞 views</a></li>
+          <li><a href="https://theculturetrip.com/asia/malaysia/articles/11-non-touristy-things-penang-malaysia/">
+          ️👨🏽👧🏻👩️🧑🏿 locals</a></li>
+          <li><a href="http://www.penang.ws/penang-attractions/10mustsee.htm">💫 and more</a></li>
+        </ul>
+        <img id="flag" src="./assets/msia-emoji.png"/>
+      </div>
       <div id="mapdiv">
         <iframe id="map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d63553.15612597365!2d100.2743267099737!3d5.405964347264963!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x304ac397ad2b7bd5%3A0x239ae45978a9b934!2sGeorge%20Town%2C%20Penang!5e0!3m2!1sen!2smy!4v1595947873693!5m2!1sen!2smy" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
       </div>
@@ -46,15 +64,6 @@
       <a href="mailto: ongzhizheng@gmail.com" target="_blank" class="fa fa-envelope-o"></a>
     </footer>
     <script src="script.js"></script>
-    <script>
-      let map;
-      function initMap() {
-        map = new google.maps.Map(document.getElementById("map"), {
-          center: { lat: -34.397, lng: 150.644 },
-          zoom: 8
-        });
-      }
-    </script>
   </body>
 </html>
 
@@ -63,9 +72,7 @@ add malaysia, hcprimary, clphs, ???
 
 projects, interests
 what im working on (add countdown to next event, link to google cal?)
-AIzaSyBeAHug4AKNZ85MbMwAGew1sedTrSlJI5I
 
-muzzic
 
 quotes keeping me up at night
 moguicangzaixijiezhong
