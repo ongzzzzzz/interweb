@@ -184,32 +184,50 @@ footer .fa:hover {
 
 /****** projects ******/
 
+#projects .title{
+  font-size: 8vh;
+  text-align: center;
+}
+
 .projectCards {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
 
+  word-wrap: break-word;
 }
 
 .projectCards .card {
   border: solid 2px #f2f2f2;
   margin: 10px;
+  width: 50vh;
   border-radius: 10%;
-  background-color: rgba(0, 0, 0, 0.5)
+  background-color: rgba(0, 0, 0, 0.5);
 }
 
 .projectCards .card .card-body {
   padding: 10px;
+
 }
 
 .projectCards .card img.card-img {
-  height: 300px;
-  width: 300px;
+  display: block;
+  width: 50vh;
+  height: auto;
   border-radius: 10% 10% 0 0;
   object-fit: cover;
 }
 
+.projectCards .project{
+  text-shadow: 5px 5px gray;
+  font-weight: bold;
+  animation: none!important;
+}
 
+.projectCards .link{
+  color: lightskyblue;
+  box-shadow: inset 0 -0.075em white, inset 0 -0.1em rgba(0, 0, 0, 0.5), inset 0 -0.15em white, inset 0 -0.175em rgba(0, 0, 0, 0.5);
+}
 
 
 /****** animation and keyframes ******/
@@ -261,60 +279,3 @@ footer .fa:hover {
   0% {opacity:0;}
   100% {opacity:1;}
 }
-
-
-
-
-
-/* .projectCards {
-  z-index: 0;
-  width: 100%;
-  display: flex;
-  justify-content: space-around;
-  flex-wrap: wrap;
-}
-
-.card {
-  margin: 30px auto;
-  width: 300px;
-  height: 300px;
-  border-radius: 40px;
-box-shadow: 5px 5px 30px 7px rgba(0,0,0,0.25), -5px -5px 30px 7px rgba(0,0,0,0.22);
-  cursor: pointer;
-  transition: 0.4s;
-}
-
-.card .card_image {
-  width: inherit;
-  height: inherit;
-  border-radius: 40px;
-}
-
-.card .card_image img {
-  width: inherit;
-  height: inherit;
-  border-radius: 40px;
-  object-fit: cover;
-}
-
-.card .card_title {
-  text-align: center;
-  border-radius: 0px 0px 40px 40px;
-  font-family: sans-serif;
-  font-weight: bold;
-  font-size: 30px;
-  margin-top: -80px;
-  height: 40px;
-}
-
-.card:hover {
-  transform: scale(0.9, 0.9);
-  box-shadow: 5px 5px 30px 15px rgba(0,0,0,0.25), 
-    -5px -5px 30px 15px rgba(0,0,0,0.22);
-}
-
-@media all and (max-width: 500px) {
-  .card-list {
-    flex-direction: column;
-  }
-} */
