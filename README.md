@@ -1,0 +1,10 @@
+# fogeinator.github.io
+
+## Usage
+Visit [this site](https://fogeinator.github.io) for the complete experience.
+
+## Technology Used
+Pure HTML and CSS with some copied JS game thrown in :3
+
+## Additional Notes
+If you really like this site, then fork it and stuff! (though the chances of that is unlikely because this is my first piece of web project :'D)  
