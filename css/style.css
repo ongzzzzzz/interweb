@@ -11,9 +11,9 @@
 
 *{
   color: azure;
-  font-family: Phantom Sans;
-  /* font-family: 'Inconsolata'; */
-  /* font-family: 'Source Sans Pro', sans-serif; */
+  font-family: Phantom Sans, "Microsoft Yahei";
+  /* some epic fonts: 'Inconsolata', 'Source Sans Pro'*/
+  /* Chinese WebSafe: "FangSong", "SimHei", "Microsoft Yahei */
 }
 
 *:hover{
@@ -113,7 +113,10 @@ footer .fa:hover {
 
 #about h1{
   text-shadow: 5px 5px gray;
-  font-size: 6vh;
+  font-size: 8vh;
+}
+#about h2{
+  font-size: 3.5vh;
 }
 
 #cec{
@@ -224,7 +227,7 @@ footer .fa:hover {
   animation: none!important;
 }
 
-.projectCards .link{
+.link{
   color: lightskyblue;
   box-shadow: inset 0 -0.075em white, inset 0 -0.1em rgba(0, 0, 0, 0.5), inset 0 -0.15em white, inset 0 -0.175em rgba(0, 0, 0, 0.5);
 }
