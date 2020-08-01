@@ -1,35 +1,109 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width">
-    <title>ongzz</title>
-    <!-- local css file -->
-    <link href="./css/style.css" rel="stylesheet" type="text/css" /> 
-    <!-- font awesome logos -->
-    <script src="https://kit.fontawesome.com/a45167a401.js" crossorigin="anonymous"></script>
-    <!-- google fonts -->
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:b&effect=anaglyph">
-    <!-- anaglyph, 3d float, 3d  -->
-    <link rel="icon" href="./assets/cuckoo.jpg" type="image/x-icon"> 
-  </head>
 
-  <body style= "background: url('./assets/pillars_of_creation/greenish(-50).gif') no-repeat center center fixed; background-size: cover; ">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width">
+	<title>ongzz</title>
+	<!-- local css file -->
+	<link href="./css/style.css" rel="stylesheet" type="text/css" />
+	<!-- font awesome logos -->
+	<script src="https://kit.fontawesome.com/a45167a401.js" crossorigin="anonymous">
+	</script>
+	<!-- google fonts -->
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:b&effect=anaglyph">
+	<!-- anaglyph, 3d float, 3d  -->
+	<link rel="icon" href="./assets/cuckoo.jpg" type="image/x-icon">
 
-    <div id="extras" class="maindiv">
+	<style>
+		body,
+		html {
+			width: 100%;
+			height: 100%;
+			margin: 0;
+			padding: 0;
+			overflow: hidden;
+		}
+	</style>
+</head>
 
-      <iframe width="980" height="410" src="https://staging-mars.nasa.gov/layout/embed/send-your-name/future/certificate/?cn=944088212196" frameborder="0"></iframe>
+<body>
 
-    </div>
+	<div id="extras" class="maindiv">
 
-    <footer>
-      <a href="./index.html" class="fa fa-home"></a>
-      <a href="https://github.com/Fogeinator" target="_blank" class="fa fa-github"></a>
-      <a href="https://www.instagram.com/ong.zhi.zheng/" target="_blank" class="fa fa-instagram"></a>
-      <a href="https://www.reddit.com/user/ongzzzz" target="_blank" class="fa fa-reddit"></a>
-      <a href="https://twitter.com/ongzzzzzz" target="_blank" class="fa fa-twitter"></a>
-      <a href="mailto: ongzhizheng@gmail.com" target="_blank" class="fa fa-envelope-o"></a>
-    </footer>
-    <script src="script.js"></script>
-  </body>
+		<div id="starfield"></div>
+		<div id="gamecontainer">
+			<canvas id="gameCanvas"></canvas>
+		</div>
+		<div id="info">
+			<p>Move with arrow keys or swipe, fire with the space bar or touch. The invaders get faster and drop more bombs as you
+				complete each level!</p>
+			<a id="muteLink" href="#" onclick="toggleMute()" class="fa fa-volume-up"></a> |
+			<a href="./index.html" class="fa fa-home"></a> |
+			<a style="color:white!important" href="https://github.com/dwmkerr/spaceinvaders" target="_blank">&nbsp; source: dwmkerr
+				at Github</a>
+		</div>
+
+		<script src="./extras/js/starfield.js">
+		</script>
+		<script src="./extras/js/spaceinvaders.js">
+
+		</script>
+		<script>
+			//  Create the starfield.
+            var container = document.getElementById('starfield');
+            var starfield = new Starfield();
+            starfield.initialise(container);
+            starfield.start();
+
+            //  Setup the canvas.
+            var canvas = document.getElementById("gameCanvas");
+            canvas.width = 800;
+            canvas.height = 600;
+
+            //  Create the game.
+            var game = new Game();
+
+            //  Initialise it with the game canvas.
+            game.initialise(canvas);
+
+            //  Start the game.
+            game.start();
+
+            //  Listen for keyboard events.
+            window.addEventListener("keydown", function keydown(e) {
+                var keycode = e.which || window.event.keycode;
+                //  Supress further processing of left/right/space (37/29/32)
+                if(keycode == 37 || keycode == 39 || keycode == 32) {
+                    e.preventDefault();
+                }
+                game.keyDown(keycode);
+
+            });
+            window.addEventListener("keyup", function keydown(e) {
+                var keycode = e.which || window.event.keycode;
+                game.keyUp(keycode);
+            });
+
+            window.addEventListener("touchstart", function (e) {
+                game.touchstart(e);
+            }, false);
+ 
+            window.addEventListener('touchend', function(e){
+                game.touchend(e);
+            }, false);
+
+            window.addEventListener('touchmove', function(e){
+                game.touchmove(e);
+            }, false);
+
+            function toggleMute() {
+                game.mute();
+                document.getElementById("muteLink").className = game.sounds.mute ? "fa fa-volume-mute" : "fa fa-volume-up";
+            }
+		</script>
+
+	</div>
+</body>
+
 </html>
