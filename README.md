@@ -13,4 +13,4 @@ If you really like this site, then fork it and stuff! (though the chances of tha
 Github suggested I get a [MIT](https://choosealicense.com/licenses/mit/) license
 
 ## Screenshots
-![](screenshot.png)
+![](assets/screenshot.png)
