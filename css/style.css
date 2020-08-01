@@ -96,7 +96,13 @@ footer .fa:hover {
   display: inline-block;
   text-align: center;
   padding: 10px;
-  font-size: 2em;
+  font-size: 8vh;
+}
+#home h2{
+  font-size: 5vh;
+}
+#home h4{
+  font-size: 3vh;
 }
 #home ul{
   list-style-type: none;
