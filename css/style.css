@@ -74,6 +74,12 @@ footer .fa:hover {
   opacity: 0.7;
 }
 
+.link{
+  color: lightskyblue;
+}
+.link:hover{
+   box-shadow: inset 0 -0.075em white, inset 0 -0.1em rgba(0, 0, 0, 0.5), inset 0 -0.15em white, inset 0 -0.175em rgba(0, 0, 0, 0.5);
+}
 
 /****** home ******/
 
@@ -122,14 +128,20 @@ footer .fa:hover {
   font-size: 8vh;
 }
 #about h2{
-  font-size: 3.5vh;
+  font-size: 2vw;
+}
+
+#intro{
+  list-style-type: none;
+  font-size: 2vw;
 }
 
 #cec{
   display: inline-block;
-  height: 3vh;
-  padding: 1vh;
-  margin-top: 2vh;
+  width: 8vw;
+  height: auto;
+  padding: 1px;
+  margin-top: 1vh;
   background-color: rgba(0, 0, 0, 0.5);
   border-radius: 10%;
 }
@@ -158,25 +170,21 @@ footer .fa:hover {
   padding: 10px;
 }
 #mapdesc h2{
-  font-size: 3vh;
+  font-size: 2vw;
   font-family: "Comic Sans MS", cursive, sans-serif;
 }
 
 #penang a{
   text-decoration: none;
-  font-size: 3vh;
+  font-size: 3vw;
   font-family: "Comic Sans MS", cursive, sans-serif;
 }
 
-#intro{
-  list-style-type: none;
-  font-size: 3vh;
-}
-
 #flag{
-  position: absolute;
-  max-height: 40%;
-  width: auto;
+  margin: auto;
+  position: relative;
+  max-width: 80%;
+  height: auto;
 }
 
 
@@ -231,11 +239,6 @@ footer .fa:hover {
   text-shadow: 5px 5px gray;
   font-weight: bold;
   animation: none!important;
-}
-
-.link{
-  color: lightskyblue;
-  box-shadow: inset 0 -0.075em white, inset 0 -0.1em rgba(0, 0, 0, 0.5), inset 0 -0.15em white, inset 0 -0.175em rgba(0, 0, 0, 0.5);
 }
 
 /****** words and stuff ******/
