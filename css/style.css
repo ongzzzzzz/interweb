@@ -354,3 +354,24 @@ footer .fa:hover {
   0% {opacity:0;}
   100% {opacity:1;}
 }
+
+#osfcontainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 600px;
+  height: 600px;
+  background-color: #e42d41;
+  border-radius: 20%;
+}
+
+#osf{
+  font-family: Phantom Sans, sans-serif;
+  flex: 0 0 75%;
+  margin: 5vw;
+  font-size: 11em;
+  text-shadow: -10px 10px gray;
+  color: white; 
+  -webkit-text-stroke-width: 1px; 
+  -webkit-text-stroke-color: black;
+}
