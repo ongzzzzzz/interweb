@@ -23,6 +23,8 @@
 			margin: 0;
 			padding: 0;
 			overflow: hidden;
+      align-content: center;
+      align-items: center;
 		}
 	</style>
 </head>
@@ -31,24 +33,21 @@
 
 	<div id="extras" class="maindiv">
 
-		<div id="starfield"></div>
-		<div id="gamecontainer">
-			<canvas id="gameCanvas"></canvas>
-		</div>
-		<div id="info">
-			<p>Move with arrow keys or swipe, fire with the space bar or touch. The invaders get faster and drop more bombs as you
-				complete each level!</p>
+    <div id="info">
+			<p>Move with arrow keys or swipe, fire with the space bar or touch. The invaders get faster and drop more bombs as you complete each level! (P to pause, M to mute)</p>
 			<a id="muteLink" href="#" onclick="toggleMute()" class="fa fa-volume-up"></a> |
 			<a href="./index.html" class="fa fa-home"></a> |
 			<a style="color:white!important" href="https://github.com/dwmkerr/spaceinvaders" target="_blank">&nbsp; source: dwmkerr
 				at Github</a>
 		</div>
 
-		<script src="./extras/js/starfield.js">
-		</script>
-		<script src="./extras/js/spaceinvaders.js">
+		<div id="starfield"></div>
+		<div id="gamecontainer">
+			<canvas id="gamecanvas"></canvas>
+		</div>		
 
-		</script>
+		<script src="./extras/js/starfield.js"></script>
+		<script src="./extras/js/spaceinvaders.js"></script>
 		<script>
 			//  Create the starfield.
             var container = document.getElementById('starfield');
@@ -57,7 +56,7 @@
             starfield.start();
 
             //  Setup the canvas.
-            var canvas = document.getElementById("gameCanvas");
+            var canvas = document.getElementById("gamecanvas");
             canvas.width = 800;
             canvas.height = 600;
 
@@ -99,8 +98,9 @@
 
             function toggleMute() {
                 game.mute();
-                document.getElementById("muteLink").className = game.sounds.mute ? "fa fa-volume-mute" : "fa fa-volume-up";
             }
+
+            
 		</script>
     <!-- hey easter egger hows your anagram search going :3 💫 since you're so dedicated i will give u a hint - there are 4 letters altogether and it's in the order of the list in the main page -->
 	</div>

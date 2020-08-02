@@ -64,7 +64,7 @@ function Game() {
 
     //  Input/output
     this.pressedKeys = {};
-    this.gameCanvas =  null;
+    this.gamecanvas =  null;
 
     //  All sounds.
     this.sounds = null;
@@ -74,21 +74,21 @@ function Game() {
 }
 
 //  Initialis the Game with a canvas.
-Game.prototype.initialise = function(gameCanvas) {
+Game.prototype.initialise = function(gamecanvas) {
 
     //  Set the game canvas.
-    this.gameCanvas = gameCanvas;
+    this.gamecanvas = gamecanvas;
 
     //  Set the game width and height.
-    this.width = gameCanvas.width;
-    this.height = gameCanvas.height;
+    this.width = gamecanvas.width;
+    this.height = gamecanvas.height;
 
     //  Set the state game bounds.
     this.gameBounds = {
-        left: gameCanvas.width / 2 - this.config.gameWidth / 2,
-        right: gameCanvas.width / 2 + this.config.gameWidth / 2,
-        top: gameCanvas.height / 2 - this.config.gameHeight / 2,
-        bottom: gameCanvas.height / 2 + this.config.gameHeight / 2,
+        left: gamecanvas.width / 2 - this.config.gameWidth / 2,
+        right: gamecanvas.width / 2 + this.config.gameWidth / 2,
+        top: gamecanvas.height / 2 - this.config.gameHeight / 2,
+        bottom: gamecanvas.height / 2 + this.config.gameHeight / 2,
     };
 };
 
@@ -154,7 +154,7 @@ function GameLoop(game) {
         var dt = 1 / game.config.fps;
 
         //  Get the drawing context.
-        var ctx = this.gameCanvas.getContext("2d");
+        var ctx = this.gamecanvas.getContext("2d");
         
         //  Update if we have an update function. Also draw
         //  if we have a draw function.
@@ -381,12 +381,18 @@ PlayState.prototype.update = function(game, dt) {
     //  more like a text editor caret.
     if(game.pressedKeys[KEY_LEFT]) {
         this.ship.x -= this.shipSpeed * dt;
+
+        document.getElementById("muteLink").className = game.sounds.mute ? "fa fa-volume-mute" : "fa fa-volume-up";
     }
     if(game.pressedKeys[KEY_RIGHT]) {
         this.ship.x += this.shipSpeed * dt;
+
+        document.getElementById("muteLink").className = game.sounds.mute ? "fa fa-volume-mute" : "fa fa-volume-up";
     }
     if(game.pressedKeys[KEY_SPACE]) {
         this.fireRocket();
+
+        document.getElementById("muteLink").className = game.sounds.mute ? "fa fa-volume-mute" : "fa fa-volume-up";
     }
 
     //  Keep the ship in bounds.
@@ -587,7 +593,8 @@ PlayState.prototype.draw = function(game, dt, ctx) {
     }
 
     //  Draw info.
-    var textYpos = game.gameBounds.bottom + ((game.height - game.gameBounds.bottom) / 2) + 14/2;
+    var textYpos = game.gameBounds.top + ((game.height + game.gameBounds.top) / 2) - 69;
+
     ctx.font="14px Arial";
     ctx.fillStyle = '#ffffff';
     var info = "Lives: " + game.lives;
@@ -617,6 +624,9 @@ PlayState.prototype.keyDown = function(game, keyCode) {
     if(keyCode == 80) {
         //  Push the pause state.
         game.pushState(new PauseState());
+    }
+    if(keyCode == 77){
+      game.mute();
     }
 };
 
