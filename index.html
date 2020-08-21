@@ -12,6 +12,7 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:b&effect=anaglyph|3d-float|3d">
     <!-- anaglyph, 3d float, 3d  -->
     <link rel="icon" href="./assets/cuckoo.jpg" type="image/x-icon"> 
+
   </head>
 
   <body style= "background: url('./assets/pillars_of_creation/original.gif') no-repeat center center fixed; background-size: cover; ">
@@ -62,6 +63,8 @@
     <script src="https://summer.hackclub.com/scrapbookwidget.js"></script>
     <script>displayScrapbookUsername('ongzhizheng')</script>
 
+    
+
     <footer>
       <a href="./index.html" class="fa fa-home"></a>
       <a href="https://github.com/Fogeinator" target="_blank" class="fa fa-github"></a>
@@ -72,6 +75,27 @@
     </footer>
 
     
+
+
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/7.19.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.18.0/firebase-analytics.js"></script>
+    <!-- https://firebase.google.com/docs/web/setup#available-libraries -->
+    <script>
+      //project: fogeinator
+      var firebaseConfig = {
+        apiKey: "AIzaSyAIMp3JESFOhvSTxI_82d_e1I_ohaSzw0k",
+        authDomain: "mlkittest-53d8f.firebaseapp.com",
+        databaseURL: "https://mlkittest-53d8f.firebaseio.com",
+        projectId: "mlkittest-53d8f",
+        storageBucket: "mlkittest-53d8f.appspot.com",
+        messagingSenderId: "1039507463020",
+        appId: "1:1039507463020:web:895dd783cecd733a1cb149",
+        measurementId: "G-5FNZ3KSDW0"
+      };
+      firebase.initializeApp(firebaseConfig);
+      firebase.analytics();
+    </script>
 
   </body>
 </html>
