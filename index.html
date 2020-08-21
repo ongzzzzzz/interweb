@@ -13,6 +13,19 @@
     <!-- anaglyph, 3d float, 3d  -->
     <link rel="icon" href="./assets/cuckoo.jpg" type="image/x-icon"> 
 
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script type="text/javascript" async="" src="https://www.google-analytics.com/analytics.js"></script>
+    <script async="" src="https://www.googletagmanager.com/gtag/js?id=G-5FNZ3KSDW0"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      try{
+        gtag('js', new Date());
+        gtag('config', 'G-5FNZ3KSDW0');
+        console.log("analytics");
+      } catch(err){ console.log(err); }
+    </script>
+
   </head>
 
   <body style= "background: url('./assets/pillars_of_creation/original.gif') no-repeat center center fixed; background-size: cover; ">
@@ -35,6 +48,7 @@
       <!-- oh hey there you found me!!!🐶 -->
 
       <!-- there's actually an anagram hidden somewhere for y'all easter egg hunters idk, maybe look out for random letters throughout these pages, there may or may not be hints as for prizes for it idk its just fun and who doesnt like a great hunt ;) -->
+
       <ul class="font-effect-3d-float">
         <li>
           <i class="fa fa-user-o"></i>
@@ -75,31 +89,11 @@
     </footer>
 
     
-
-
-    <!-- The core Firebase JS SDK is always required and must be listed first -->
-    <script src="https://www.gstatic.com/firebasejs/7.19.0/firebase-app.js"></script>
+    <!-- <script src="https://www.gstatic.com/firebasejs/7.19.0/firebase-app.js"></script>
     <script src="https://www.gstatic.com/firebasejs/7.18.0/firebase-analytics.js"></script>
-    <!-- https://firebase.google.com/docs/web/setup#available-libraries -->
-    <script>
-      //project: fogeinator
-      var firebaseConfig = {
-        apiKey: "AIzaSyAIMp3JESFOhvSTxI_82d_e1I_ohaSzw0k",
-        authDomain: "mlkittest-53d8f.firebaseapp.com",
-        databaseURL: "https://mlkittest-53d8f.firebaseio.com",
-        projectId: "mlkittest-53d8f",
-        storageBucket: "mlkittest-53d8f.appspot.com",
-        messagingSenderId: "1039507463020",
-        appId: "1:1039507463020:web:895dd783cecd733a1cb149",
-        measurementId: "G-5FNZ3KSDW0"
-      };
-      if (firebase.apps.length === 0) {
-        firebase.initializeApp(firebaseConfig);
-        firebase.analytics();
-        console.log("hey");
-      }
-        
-    </script>
+    <script src="./assets/initFirebase.js"></script> -->
+
+    
 
   </body>
 </html>
