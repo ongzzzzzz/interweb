@@ -82,7 +82,7 @@ footer .fa:hover {
 }
 
 .link:hover::before, .link:focus::before{
-  content: "~~~~~~~~~~~~";
+  content: "~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~";
   font-size: 0.8em;
   font-weight: 700;
   color: pink;
