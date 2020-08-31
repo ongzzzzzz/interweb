@@ -1,11 +1,14 @@
 {
 	"routes": [
+    { "handle": "filesystem" },
+    
 		{ "src": "/", "dest": "/index.html" },
-		{ "src": "/about", "dest": "/about.html" },
-		{ "src": "/muzzic", "dest": "/muzzic.html" },
-		{ "src": "/projects", "dest": "/projects.html" },
-		{ "src": "/extras", "dest": "/extras.html" },
-		{ "src": "/words", "dest": "/words.html" },
-		{ "src": "/(.*)", "dest": "/404.html" }
+		{ "src": "/about"},
+		{ "src": "/muzzic"},
+		{ "src": "/projects"},
+		{ "src": "/extras"},
+		{ "src": "/words"},
+    
+    { "src": "/(.*)", "status": 404, "dest": "/404.html" }
 	]
 }
