@@ -15,6 +15,3 @@ Github suggested I get a [MIT](https://choosealicense.com/licenses/mit/) license
 
 ## Screenshot
 ![](assets/screenshot.png)
-
-## This thing
-![](https://github-readme-stats.vercel.app/api?username=Fogeinator&show_icons=true&hide_border=true&count_private=true)
