@@ -5,9 +5,9 @@
 		{ "src": "/", "dest": "/index.html" },
 		{ "src": "/about", "dest": "/about.html" },
 		{ "src": "/muzzic", "dest": "/muzzic.html" },
-		{ "src": "/projects", "dest": "projects" },
-		{ "src": "/extras", "dest": "extras" },
-		{ "src": "/words", "dest": "words" },
+		{ "src": "/projects", "dest": "/projects.html" },
+		{ "src": "/extras", "dest": "/extras.html" },
+		{ "src": "/words", "dest": "/words.html" },
     
     { "src": "/(.*)", "status": 404, "dest": "/404.html" }
 	]
